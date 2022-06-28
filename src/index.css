@@ -1,3 +1,42 @@
 @import 'tailwindcss/dist/base.css';
 @import 'tailwindcss/dist/components.css';
 @import 'tailwindcss/dist/utilities.css';
+
+*{
+    box-sizing: border-box;
+}
+
+.mainInfo{
+    display: flex;
+    gap: 5rem;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3rem;
+
+}
+
+.card{
+    width: 20rem;
+    border-radius: 15px;
+    display: grid;
+    grid-template-columns: auto auto 1fr;
+    align-items: center;
+    overflow: hidden;
+    padding: 1rem;
+    gap: 1rem;
+    cursor: pointer;
+    background-color: aliceblue;
+
+}
+
+.card:hover{
+    background-color: #e6f0e5;
+}
+.card img{
+    width: 3.5rem;
+    height: 3.5rem;
+    object-fit: cover;
+    border-radius: 50%;
+    
+}
