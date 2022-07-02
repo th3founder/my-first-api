@@ -4,6 +4,11 @@ const url = "https://platzi-avo.vercel.app/api/avo";
 
 const appNode = document.querySelector('#app')
 
+appNode.addEventListener('click', (event)=>{
+    if(event.target.nodeName === 'H2'){
+        window.alert(`Es un ${event.target.nodeName}`)
+    }
+})
 /* const formatPrice = (price) =>{
     const newPrice = new window.Intl.NumberFormat("en-EN",{
         style:"curreyncy",
@@ -35,6 +40,12 @@ const getData = async (url_api) =>{
 
             const title = document.createElement('h2')
             title.textContent = element.name
+/*             title.addEventListener('click', (event)=>{
+                window.alert('Hola')
+            })
+            No es recomendable por el tema de la propagacion, porque si tenemos 100 elementos de la API, seran 100 alerts y no es optimo
+ */       
+
             /* title.className = "text-2xl text-red-600" */
 
             //crear precio
